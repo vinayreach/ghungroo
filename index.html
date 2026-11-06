@@ -10,8 +10,8 @@
 <meta name="page-kind" content="place">
 <meta property="og:title" content="Ghungroo Bar &amp; Restaurant, Nacharam">
 <meta property="og:description" content="Biryani, Andhra curries and a full bar for over 30 years. Open daily, 12:00 to 23:00.">
-<meta property="og:image" content="assets/img/hero-bar-room.webp">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23b8086a'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23f7f3ec' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E">
+<meta property="og:image" content="assets/logo/ghungroo-logo-cocktail-magenta.png">
+<link rel="icon" href="assets/logo/ghungroo-icon-cocktail.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..600&family=Libre+Franklin:wght@400..600&display=swap" rel="stylesheet">
@@ -33,6 +33,8 @@
 </style>
 <!-- page CSS: the place compositions (strip, tall-small, pair) and the browser surfaces -->
 <style>
+  header.nav .nav__logo > .nav__logo-img { display: block; height: 54px; width: auto; max-width: none; }
+  @media (max-width: 639px) { header.nav .nav__logo > .nav__logo-img { height: 40px; } }
   ::selection { background: #b8086a; color: #f7f3ec; }
   .head-row { display: grid; gap: var(--s-4); margin-bottom: 48px; }
   .head-row > h2 { margin: 0; }
@@ -50,11 +52,16 @@
   .brands__item { margin: 0; overflow: hidden; background: var(--surface); }
   .brands__item > img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; transition: transform .4s cubic-bezier(.2,.7,.2,1); }
   .brands__item:hover > img { transform: scale(1.03); }
+  .wlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .wlist li { font-size: 16px; line-height: 24px; }
+  .collage { margin: 0; }
+  .collage > img { display: block; width: 100%; height: auto; }
   .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gutter, 24px); }
   .pair__item { margin: 0; overflow: hidden; }
   .pair__item > img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
   @media (min-width: 640px) and (max-width: 1023px) {
     #food .grid > .span-4 { grid-column: auto / span 4; }
+    #whisky .grid > .span-3 { grid-column: auto / span 3; }
     #food .strip > .pl-photo { grid-column: auto / span 3; }
     #visit .pl-photo > img { aspect-ratio: 16 / 9; }
     .brands { grid-template-columns: repeat(6, minmax(0, 1fr)); }
@@ -73,6 +80,7 @@
     #food .strip .pl-photo > img { aspect-ratio: 2 / 3; }
     #food .strip { gap: 12px; }
     #bar .groups { gap: 12px; }
+    #whisky .grid > .span-3 { grid-column: auto / span 6; }
     .brands { gap: 12px; }
     #visit .pl-photo > img { aspect-ratio: 2 / 1; }
     .pair { grid-template-columns: minmax(0, 1fr); }
@@ -112,7 +120,7 @@
 
 <header class="nav nav--split">
   <div class="wrap nav__bar">
-    <a class="nav__logo" href="#top"><span class="mark" data-mark="petal" aria-hidden="true"></span>Ghungroo</a>
+    <a class="nav__logo" href="#top" aria-label="Ghungroo Bar &amp; Restaurant, home"><img class="nav__logo-img" src="assets/logo/ghungroo-logo-cocktail-horizontal.svg" alt="Ghungroo Bar &amp; Restaurant" width="502" height="150"></a>
     <nav class="nav__links" aria-label="Main">
       <div class="nav__item">
         <a class="nav__link" href="#food">Food <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -121,7 +129,7 @@
             <a class="menu-card span-3" href="#food"><div class="panel"><img class="frame__img" src="assets/img/biryani-800.webp" srcset="assets/img/biryani-600.webp 600w, assets/img/biryani-800.webp 800w, assets/img/biryani.webp 1000w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1000" height="1000" alt="Biryani in a kadai" loading="lazy"></div><span class="t-card">Biryani</span><span class="t-small muted">Keema, chicken, mutton, prawn</span></a>
             <a class="menu-card span-3" href="#food"><div class="panel"><img class="frame__img" src="assets/img/fish-curry-800.webp" srcset="assets/img/fish-curry-600.webp 600w, assets/img/fish-curry-800.webp 800w, assets/img/fish-curry.webp 1068w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1068" height="1068" alt="Curries with rice and whole spices" loading="lazy"></div><span class="t-card">Andhra curries</span><span class="t-small muted">Chepala pulusu, gongura mutton</span></a>
             <a class="menu-card span-3" href="#food"><div class="panel"><img class="frame__img" src="assets/img/kebabs-800.webp" srcset="assets/img/kebabs-600.webp 600w, assets/img/kebabs-800.webp 800w, assets/img/kebabs.webp 1067w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1067" height="1067" alt="Tandoori chicken from the tandoor" loading="lazy"></div><span class="t-card">Tandoor</span><span class="t-small muted">Kalmi kebab, tikka, fish tikka</span></a>
-            <a class="menu-card span-3" href="#bar"><div class="panel"><img class="frame__img" src="assets/img/brand-mcdowells.webp" width="600" height="800" alt="A bottle of McDowell's No.1 whisky" loading="lazy"></div><span class="t-card">The bar</span><span class="t-small muted">Royal Stag, Black Dog, Old Monk</span></a>
+            <a class="menu-card span-3" href="#whisky"><div class="panel"><img class="frame__img" src="assets/img/indian-collage-800.webp" width="972" height="480" alt="Bottles of Royal Challenge, Royal Stag, McDowell&rsquo;s No.1 and Black Dog" loading="lazy"></div><span class="t-card">Whisky list</span><span class="t-small muted">Over 40 Scotch and Indian whiskies</span></a>
           </div>
         </div>
       </div>
@@ -140,7 +148,7 @@
 
 <main id="top">
   <section class="hero hero--place" aria-labelledby="hero-h">
-    <img class="hero__bg" src="assets/img/hero-bar-room-800.webp" srcset="assets/img/hero-bar-room-600.webp 600w, assets/img/hero-bar-room-800.webp 800w, assets/img/hero-bar-room.webp 2000w" sizes="100vw" width="2000" height="667" alt="Bottles of Black Dog whisky, McDowell&rsquo;s No.1 rum, Kingfisher beer and Old Monk rum" style="--ly-pos: 50% 50%" fetchpriority="high" data-source="library-unsplash" data-subject="liquor brands">
+    <img class="hero__bg" src="assets/img/hero-bar-room-1200.webp" srcset="assets/img/hero-bar-room-800.webp 800w, assets/img/hero-bar-room-1200.webp 1200w, assets/img/hero-bar-room.webp 3000w" sizes="100vw" width="3000" height="1000" alt="Three lit bar shelves holding sixty bottles of whisky, rum, gin, vodka and beer" style="--ly-pos: 50% 50%" fetchpriority="high" data-source="wikimedia" data-subject="bar shelves">
     <div class="wrap"><div class="hero-text">
       <div class="hero__text">
         <h1 id="hero-h">Restaurant and bar in Nacharam</h1>
@@ -256,6 +264,78 @@
           <figure class="brands__item"><img src="assets/img/brand-kingfisher.webp" width="600" height="800" alt="A bottle of Kingfisher beer with a glass" loading="lazy" data-source="wikimedia" data-subject="kingfisher"></figure>
           <figure class="brands__item"><img src="assets/img/brand-bira.webp" width="600" height="800" alt="A bottle of Bira 91 beer" loading="lazy" data-source="wikimedia" data-subject="bira"></figure>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section g2" id="whisky" style="--h: 2" aria-labelledby="whisky-h">
+    <div class="wrap">
+      <div class="group">
+        <div class="head-row">
+          <h2 id="whisky-h">Whisky by the peg or the bottle</h2>
+          <div class="head-row__side"><p>Over 40 imported, Scotch and Indian whiskies, poured in 30 or 60&nbsp;ml.</p></div>
+        </div>
+        <div class="grid grid--top">
+        <div class="span-3">
+          <p class="t-label group__label">Imported and aged Scotch</p>
+          <ul class="wlist">
+            <li>Chivas Regal 12</li>
+            <li>Johnnie Walker Black Label</li>
+            <li>Johnnie Walker Red Label</li>
+            <li>Johnnie Walker Blonde</li>
+            <li>Ballantine&rsquo;s</li>
+            <li>Jameson</li>
+            <li>Jim Beam</li>
+            <li>100 Pipers 12 and 8</li>
+            <li>Teacher&rsquo;s 50</li>
+            <li>Teacher&rsquo;s Reserve</li>
+            <li>Teacher&rsquo;s 12</li>
+          </ul>
+        </div>
+        <div class="span-3">
+          <p class="t-label group__label">Scotch</p>
+          <ul class="wlist">
+            <li>100 Pipers</li>
+            <li>Something Special</li>
+            <li>Dewar&rsquo;s</li>
+            <li>Black &amp; White</li>
+            <li>Teacher&rsquo;s Highland Cream</li>
+            <li>Black Dog Black Reserve</li>
+            <li>Black Dog Gold Reserve</li>
+            <li>William Lawson&rsquo;s</li>
+            <li>VAT 69</li>
+            <li>Grant&rsquo;s</li>
+          </ul>
+        </div>
+        <div class="span-3">
+          <p class="t-label group__label">Premium Indian whisky</p>
+          <ul class="wlist">
+            <li>Blender&rsquo;s Pride Reserve</li>
+            <li>Blender&rsquo;s Pride</li>
+            <li>Royal Stag Barrel Select</li>
+            <li>Signature</li>
+            <li>Antiquity Blue</li>
+            <li>Oaken Glow</li>
+            <li>Oaksmith Gold</li>
+            <li>Oaksmith Silver</li>
+            <li>American Pride</li>
+            <li>Royal Challenge</li>
+            <li>Legacy</li>
+          </ul>
+        </div>
+        <div class="span-3">
+          <p class="t-label group__label">Deluxe and regular</p>
+          <ul class="wlist">
+            <li>Royal Stag</li>
+            <li>McDowell&rsquo;s Platinum</li>
+            <li>McDowell&rsquo;s No.1</li>
+            <li>Imperial Blue</li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      <div class="group">
+        <figure class="collage"><img src="assets/img/whisky-collage-1200.webp" srcset="assets/img/whisky-collage-800.webp 800w, assets/img/whisky-collage-1200.webp 1200w, assets/img/whisky-collage.webp 2380w" sizes="(min-width: 1440px) 1200px, 100vw" width="2380" height="1048" alt="Twelve whisky bottles: Chivas Regal, Johnnie Walker Black and Red Label, Ballantine&rsquo;s, Jameson, Jim Beam, 100 Pipers, Teacher&rsquo;s, Dewar&rsquo;s, Black &amp; White, VAT 69 and William Lawson&rsquo;s" loading="lazy" data-source="wikimedia" data-subject="whisky collage"></figure>
       </div>
     </div>
   </section>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Ghungroo Bar &amp; Restaurant">
+<title>Ghungroo Bar &amp; Restaurant</title>
+<g transform="translate(0 0) scale(1.0)">
+  <circle cx="100" cy="100" r="98" fill="#b8086a"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#d2a849" stroke-width="2"/>
+  <path d="M30 66 Q100 112 170 66" fill="none" stroke="#f7f3ec" stroke-width="4" stroke-linecap="round"/>
+  <line x1="58.0" y1="80.7" x2="58.0" y2="89.7" stroke="#f7f3ec" stroke-width="2.4"/>
+  <circle cx="58.0" cy="93.3" r="3.6" fill="none" stroke="#f7f3ec" stroke-width="2.4"/>
+  <circle cx="58.0" cy="113.5" r="17" fill="#d2a849"/>
+  <path d="M46.1 116.6 H69.9" stroke="#7a0546" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M58.0 116.6 V129.7" stroke="#7a0546" stroke-width="2.0" stroke-linecap="round"/>
+  <path d="M48.6 107.0 A11.9 11.9 0 0 1 57.1 101.6" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="1.7" stroke-linecap="round"/>
+  <line x1="100.0" y1="89.0" x2="100.0" y2="98.0" stroke="#f7f3ec" stroke-width="2.4"/>
+  <circle cx="100.0" cy="101.6" r="3.6" fill="none" stroke="#f7f3ec" stroke-width="2.4"/>
+  <circle cx="100.0" cy="125.8" r="21" fill="#d2a849"/>
+  <path d="M85.3 129.6 H114.7" stroke="#7a0546" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="M100.0 129.6 V145.8" stroke="#7a0546" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M88.5 117.8 A14.7 14.7 0 0 1 99.0 111.1" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="2.1" stroke-linecap="round"/>
+  <line x1="142.0" y1="80.7" x2="142.0" y2="89.7" stroke="#f7f3ec" stroke-width="2.4"/>
+  <circle cx="142.0" cy="93.3" r="3.6" fill="none" stroke="#f7f3ec" stroke-width="2.4"/>
+  <circle cx="142.0" cy="113.5" r="17" fill="#d2a849"/>
+  <path d="M130.1 116.6 H153.9" stroke="#7a0546" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M142.0 116.6 V129.7" stroke="#7a0546" stroke-width="2.0" stroke-linecap="round"/>
+  <path d="M132.7 107.0 A11.9 11.9 0 0 1 141.2 101.6" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="1.7" stroke-linecap="round"/>
+  <circle cx="30" cy="66" r="5" fill="#d2a849"/><circle cx="170" cy="66" r="5" fill="#d2a849"/>
+</g>
+</svg>

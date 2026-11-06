@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Ghungroo Bar &amp; Restaurant">
+<title>Ghungroo Bar &amp; Restaurant</title>
+<circle cx="100" cy="100" r="100" fill="#b8086a"/>
+<g transform="translate(36 40) scale(1.28)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 25 H79 L50 56 Z" fill="#7a0546" stroke="none"/>
+  <path d="M12 18 H88 L50 59 Z" stroke="#d2a849" stroke-width="3.4"/>
+  <path d="M50 59 V88" stroke="#d2a849" stroke-width="3.4"/>
+  <path d="M33 90 H67" stroke="#d2a849" stroke-width="3.4"/>
+  <path d="M71 3 L46 33" stroke="#d2a849" stroke-width="2.2"/>
+  <circle cx="66.5" cy="11" r="7.4" fill="#d2a849" stroke="none"/>
+  <path d="M62.2 12.4 H70.8" stroke="#7a0546" stroke-width="1.6"/>
+  <path d="M66.5 12.4 V17" stroke="#7a0546" stroke-width="1"/>
+  <path d="M63.2 8.4 A4.2 4.2 0 0 1 66 6.2" stroke="#fff" stroke-opacity=".5" stroke-width="1"/>
+</g>
+</svg>

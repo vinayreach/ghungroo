@@ -46,3 +46,19 @@ photo of the same subject (same file name, WebP or JPG, landscape, window light,
 
 Built with the taste-skill kit (`assets/`): place layout, Source Serif 4 + Libre Franklin,
 magenta `#b8086a` from the menu booklet on warm off-white. Page CSS is in the `<style>` blocks in `index.html`.
+
+## Logo
+
+In `assets/logo/` (SVG is vector, use it for print and signboards; PNG for WhatsApp, social and documents):
+
+| File | Use |
+|---|---|
+| ghungroo-logo-cocktail.svg / .png | Main logo: cocktail glass with a ghungroo-bell garnish, name, "Bar & Restaurant", "A legacy of 30 years" |
+| ghungroo-logo-cocktail-dark.svg / .png | Same, on dark backgrounds |
+| ghungroo-logo-cocktail-magenta.svg / .png | Same, on brand magenta (signboard, social posts) |
+| ghungroo-logo-cocktail-horizontal.svg / .png | Wide version for the website header and letterheads |
+| ghungroo-icon-cocktail.svg / .png | Round icon: favicon, WhatsApp and Instagram profile picture |
+| ghungroo-logo-stacked*.svg, ghungroo-mark.svg | Earlier alternative with three bells on a cord |
+
+Colours: magenta #B8086A, deep magenta #7A0546, brass gold #D2A849, cream #F7F3EC, ink #2A2622.
+Fonts: Source Serif 4 (name) and Libre Franklin (small caps line), converted to outlines in the SVGs.
