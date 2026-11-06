@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en" data-type="place" data-radius="soft" data-buttons="block" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ghungroo Bar &amp; Restaurant: restaurant and bar in Nacharam, Hyderabad</title>
+<meta name="description" content="Ghungroo Bar &amp; Restaurant in Nacharam, Hyderabad: biryani, Andhra and Telangana curries, tandoor and a full bar for over 30 years. Open daily, 12:00 to 23:00.">
+<meta name="site-kind" content="other">
+<meta name="page-type" content="place">
+<meta name="page-kind" content="place">
+<meta property="og:title" content="Ghungroo Bar &amp; Restaurant, Nacharam">
+<meta property="og:description" content="Biryani, Andhra curries and a full bar for over 30 years. Open daily, 12:00 to 23:00.">
+<meta property="og:image" content="assets/img/hero-bar-room.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23b8086a'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23f7f3ec' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..600&family=Libre+Franklin:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<style>
+:root {
+  --p-bg: #f7f3ec; --p-surface: #ede6da; --p-ink: #2a2622; --p-muted: #665e55;
+  --p-accent: #b8086a; --p-accent-ink: #f7f3ec; --p-action: #b8086a; --p-action-ink: #f7f3ec;
+  --p-inv-bg: #2a2622; --p-inv-surface: #36322e; --p-inv-ink: #f7f3ec; --p-inv-muted: #a29e98;
+  --p-inv-accent: #f7f3ec; --p-inv-accent-ink: #2a2622; --p-inv-action: #f7f3ec; --p-inv-action-ink: #2a2622;
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-text: "Libre Franklin", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.02em;
+}
+</style>
+<!-- page CSS: the place compositions (strip, tall-small, pair) and the browser surfaces -->
+<style>
+  ::selection { background: #b8086a; color: #f7f3ec; }
+  .head-row { display: grid; gap: var(--s-4); margin-bottom: 48px; }
+  .head-row > h2 { margin: 0; }
+  .head-row__side { display: flex; align-items: baseline; gap: var(--s-5); flex-wrap: wrap; }
+  .head-row__side p { margin: 0; color: var(--muted); }
+  .group__label { margin: 0 0 12px; }
+  .rows--plain > li { padding-block: 10px; }
+  #food .strip { margin-top: var(--s-7); }
+  #food .strip .pl-photo { --pl-cap: 282px; }
+  #bar .side { display: flex; flex-direction: column; gap: var(--s-5); }
+  #bar .side > h2 { margin: 0; }
+  #bar .side > p { margin: 0; }
+  #bar .side > .link { align-self: flex-start; }
+  .brands { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .brands__item { margin: 0; overflow: hidden; background: var(--surface); }
+  .brands__item > img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; transition: transform .4s cubic-bezier(.2,.7,.2,1); }
+  .brands__item:hover > img { transform: scale(1.03); }
+  .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gutter, 24px); }
+  .pair__item { margin: 0; overflow: hidden; }
+  .pair__item > img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    #food .grid > .span-4 { grid-column: auto / span 4; }
+    #food .strip > .pl-photo { grid-column: auto / span 3; }
+    #visit .pl-photo > img { aspect-ratio: 16 / 9; }
+    .brands { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .brands__item > img { aspect-ratio: 1 / 2; }
+    .pair__item > img { aspect-ratio: 2 / 3; }
+    #food .strip .pl-photo > img { aspect-ratio: 2 / 3; }
+  }
+  #visit .visit__head p { margin: 0; font-weight: 500; }
+  #visit .visit__cols { grid-template-columns: minmax(0, 1fr); }
+  #bar .groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5); }
+  .pl-photo a { display: block; overflow: hidden; }
+  #contact .close__word { line-height: 1.04; overflow: visible; font-size: clamp(64px, 12vw, 172px); }
+  @media (max-width: 639px) {
+    #food .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #food .strip > .pl-photo { grid-column: auto; }
+    #food .strip .pl-photo > img { aspect-ratio: 2 / 3; }
+    #food .strip { gap: 12px; }
+    #bar .groups { gap: 12px; }
+    .brands { gap: 12px; }
+    #visit .pl-photo > img { aspect-ratio: 2 / 1; }
+    .pair { grid-template-columns: minmax(0, 1fr); }
+    .pair__item > img { aspect-ratio: 16 / 9; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Ghungroo Bar & Restaurant",
+  "description": "Restaurant and bar in Nacharam, Hyderabad, serving biryani, Andhra and Telangana curries, tandoor and Indo-Chinese dishes for over 30 years.",
+  "servesCuisine": ["Hyderabadi", "Andhra", "Telangana", "North Indian", "Tandoor", "Indo-Chinese"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Narmada Arcade, above HDFC Bank, Snehapuri Colony",
+    "addressLocality": "Nacharam, Hyderabad",
+    "addressRegion": "Telangana",
+    "addressCountry": "IN"
+  },
+  "hasMap": "https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "12:00", "closes": "23:00"
+  }],
+  "acceptsReservations": false,
+  "image": "assets/img/hero-bar-room.webp"
+}
+</script>
+</head>
+<body>
+<!-- type: place (restaurant and bar)
+     deal: hero place (printed), nav nav-split, footer footer-visit, close close-word (type moment: name),
+     rhythm surface-pairs, buttons block, mark petal, offer strip, place pair, rooms not used
+     moments: none (place) · photographs: 10 Unsplash stand-ins, listed in README.md for the client to replace -->
+
+<header class="nav nav--split">
+  <div class="wrap nav__bar">
+    <a class="nav__logo" href="#top"><span class="mark" data-mark="petal" aria-hidden="true"></span>Ghungroo</a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item">
+        <a class="nav__link" href="#food">Food <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <a class="menu-card span-3" href="#food"><div class="panel"><img class="frame__img" src="assets/img/biryani-800.webp" srcset="assets/img/biryani-600.webp 600w, assets/img/biryani-800.webp 800w, assets/img/biryani.webp 1000w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1000" height="1000" alt="Biryani in a kadai" loading="lazy"></div><span class="t-card">Biryani</span><span class="t-small muted">Keema, chicken, mutton, prawn</span></a>
+            <a class="menu-card span-3" href="#food"><div class="panel"><img class="frame__img" src="assets/img/fish-curry-800.webp" srcset="assets/img/fish-curry-600.webp 600w, assets/img/fish-curry-800.webp 800w, assets/img/fish-curry.webp 1068w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1068" height="1068" alt="Curries with rice and whole spices" loading="lazy"></div><span class="t-card">Andhra curries</span><span class="t-small muted">Chepala pulusu, gongura mutton</span></a>
+            <a class="menu-card span-3" href="#food"><div class="panel"><img class="frame__img" src="assets/img/kebabs-800.webp" srcset="assets/img/kebabs-600.webp 600w, assets/img/kebabs-800.webp 800w, assets/img/kebabs.webp 1067w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1067" height="1067" alt="Tandoori chicken from the tandoor" loading="lazy"></div><span class="t-card">Tandoor</span><span class="t-small muted">Kalmi kebab, tikka, fish tikka</span></a>
+            <a class="menu-card span-3" href="#bar"><div class="panel"><img class="frame__img" src="assets/img/brand-mcdowells.webp" width="600" height="800" alt="A bottle of McDowell's No.1 whisky" loading="lazy"></div><span class="t-card">The bar</span><span class="t-small muted">Royal Stag, Black Dog, Old Monk</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="#bar">Bar</a></div>
+      <div class="nav__item"><a class="nav__link" href="#parties">Parties</a></div>
+      <div class="nav__item"><a class="nav__link" href="#visit">Visit</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Get directions</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--place" aria-labelledby="hero-h">
+    <img class="hero__bg" src="assets/img/hero-bar-room-800.webp" srcset="assets/img/hero-bar-room-600.webp 600w, assets/img/hero-bar-room-800.webp 800w, assets/img/hero-bar-room.webp 2000w" sizes="100vw" width="2000" height="667" alt="Bottles of Black Dog whisky, McDowell&rsquo;s No.1 rum, Kingfisher beer and Old Monk rum" style="--ly-pos: 50% 50%" fetchpriority="high" data-source="library-unsplash" data-subject="liquor brands">
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__text">
+        <h1 id="hero-h">Restaurant and bar in Nacharam</h1>
+        <p class="hero__lead">Biryani, Andhra curries and a full bar for 30&nbsp;years. Open daily 12:00 to 23:00.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Get directions<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section" id="visit" data-place="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="visit-h">Visit</h2></div>
+      <div class="grid grid--top">
+        <div class="visit visit--card span-6">
+          <div class="visit__head"><p data-open-now></p></div>
+          <div class="visit__cols">
+            <div class="visit__col stack-4">
+              <address class="visit__address"><a class="link" href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Narmada Arcade, above HDFC&nbsp;Bank<br>Snehapuri Colony, Nacharam, Hyderabad</a></address>
+            </div>
+            <div class="visit__col">
+              <dl class="hours" data-tz="Asia/Kolkata"><dt data-days="mon-sun">Every day</dt><dd>12:00 to 23:00</dd></dl>
+            </div>
+          </div>
+          <ul class="visit__rows">
+            <li><span>Last order</span><span>23:00</span></li>
+            <li><span>Private room</span><span>Up to 40&nbsp;guests</span></li>
+          </ul>
+        </div>
+        <figure class="pl-photo span-6 start-7" style="--pl-r: 1.3333"><img src="assets/img/dining-room-800.webp" srcset="assets/img/dining-room-600.webp 600w, assets/img/dining-room-800.webp 800w, assets/img/dining-room.webp 1400w" sizes="(min-width: 1024px) 588px, 100vw" width="1400" height="1050" alt="Dining room with wooden shelves of brass vessels" loading="lazy" data-source="library-unsplash" data-subject="dining room"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ground-surface" id="food" style="--h: 1; --hm: 2" aria-labelledby="food-h">
+    <div class="wrap">
+      <div class="head-row">
+        <h2 id="food-h">Biryani, curries and tandoor</h2>
+        <div class="head-row__side"><p>Cooked to the same recipes for 30&nbsp;years.</p><a class="link" href="#bar">See the bar<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+      </div>
+      <div class="grid grid--top">
+        <div class="span-4">
+          <p class="t-label group__label">Biryani</p>
+          <ul class="rows rows--plain">
+            <li><span class="rows__name">Ghungroo special keema biryani</span></li>
+            <li><span class="rows__name">Chicken biryani, boneless</span></li>
+            <li><span class="rows__name">Prawns biryani</span></li>
+            <li><span class="rows__name">Family packs to take home</span></li>
+          </ul>
+        </div>
+        <div class="span-4">
+          <p class="t-label group__label">Andhra and Telangana</p>
+          <ul class="rows rows--plain">
+            <li><span class="rows__name">Ghungroo special chepala pulusu</span></li>
+            <li><span class="rows__name">Gongura mutton</span></li>
+            <li><span class="rows__name">Natu kodi pulusu</span></li>
+            <li><span class="rows__name">Telangana chicken</span></li>
+          </ul>
+        </div>
+        <div class="span-4">
+          <p class="t-label group__label">Tandoor and starters</p>
+          <ul class="rows rows--plain">
+            <li><span class="rows__name">Kalmi kebab</span></li>
+            <li><span class="rows__name">Ajwain fish tikka</span></li>
+            <li><span class="rows__name">Chicken 65</span></li>
+            <li><span class="rows__name">Loose prawns</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid strip">
+        <figure class="pl-photo span-3" style="--pl-r: 1"><img src="assets/img/biryani-800.webp" srcset="assets/img/biryani-600.webp 600w, assets/img/biryani-800.webp 800w, assets/img/biryani.webp 1000w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1000" height="1000" alt="Biryani in a kadai" loading="lazy" data-source="library-unsplash" data-subject="biryani"></figure>
+        <figure class="pl-photo span-3" style="--pl-r: 1"><img src="assets/img/fish-curry-800.webp" srcset="assets/img/fish-curry-600.webp 600w, assets/img/fish-curry-800.webp 800w, assets/img/fish-curry.webp 1068w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1068" height="1068" alt="Curries with rice and whole spices" loading="lazy" data-source="library-unsplash" data-subject="fish curry"></figure>
+        <figure class="pl-photo span-3" style="--pl-r: 1"><img src="assets/img/kebabs-800.webp" srcset="assets/img/kebabs-600.webp 600w, assets/img/kebabs-800.webp 800w, assets/img/kebabs.webp 1067w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1067" height="1067" alt="Tandoori chicken from the tandoor" loading="lazy" data-source="library-unsplash" data-subject="kebabs"></figure>
+        <figure class="pl-photo span-3" style="--pl-r: 1"><img src="assets/img/curry-naan-800.webp" srcset="assets/img/curry-naan-600.webp 600w, assets/img/curry-naan-800.webp 800w, assets/img/curry-naan.webp 1068w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1068" height="1068" alt="Palak curry with roti" loading="lazy" data-source="library-unsplash" data-subject="curry and naan"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="bar" style="--h: 1" aria-labelledby="bar-h">
+    <div class="wrap">
+      <div class="grid grid--top">
+        <div class="side span-6">
+          <h2 id="bar-h">Indian whisky, rum and beer at the bar</h2>
+          <p>Royal Stag, McDowell&rsquo;s, Black Dog and Old Monk by the 30&nbsp;ml peg or the bottle, and chilled Kingfisher and Bira 91.</p>
+          <div class="groups">
+            <div>
+              <p class="t-label group__label">Whisky and rum</p>
+              <ul class="rows rows--plain">
+                <li><span class="rows__name">Royal Stag</span></li>
+                <li><span class="rows__name">McDowell&rsquo;s No.1</span></li>
+                <li><span class="rows__name">Blender&rsquo;s Pride</span></li>
+                <li><span class="rows__name">Black Dog</span></li>
+                <li><span class="rows__name">Old Monk</span></li>
+              </ul>
+            </div>
+            <div>
+              <p class="t-label group__label">Beer</p>
+              <ul class="rows rows--plain">
+                <li><span class="rows__name">Kingfisher</span></li>
+                <li><span class="rows__name">Kingfisher Ultra</span></li>
+                <li><span class="rows__name">Haywards 5000</span></li>
+                <li><span class="rows__name">Bira 91</span></li>
+                <li><span class="rows__name">Budweiser</span></li>
+              </ul>
+            </div>
+          </div>
+          <a class="link" href="#parties">See the private room<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+        </div>
+        <div class="brands span-6 start-7">
+          <figure class="brands__item"><img src="assets/img/brand-royal-stag.webp" width="600" height="800" alt="A bottle of Royal Stag whisky" loading="lazy" data-source="wikimedia" data-subject="royal-stag"></figure>
+          <figure class="brands__item"><img src="assets/img/brand-mcdowells.webp" width="600" height="800" alt="A bottle of McDowell's No.1 whisky" loading="lazy" data-source="wikimedia" data-subject="mcdowells"></figure>
+          <figure class="brands__item"><img src="assets/img/brand-black-dog.webp" width="600" height="800" alt="A bottle of Black Dog Centenary whisky" loading="lazy" data-source="wikimedia" data-subject="black-dog"></figure>
+          <figure class="brands__item"><img src="assets/img/brand-old-monk.webp" width="600" height="800" alt="A bottle of Old Monk rum" loading="lazy" data-source="wikimedia" data-subject="old-monk"></figure>
+          <figure class="brands__item"><img src="assets/img/brand-kingfisher.webp" width="600" height="800" alt="A bottle of Kingfisher beer with a glass" loading="lazy" data-source="wikimedia" data-subject="kingfisher"></figure>
+          <figure class="brands__item"><img src="assets/img/brand-bira.webp" width="600" height="800" alt="A bottle of Bira 91 beer" loading="lazy" data-source="wikimedia" data-subject="bira"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="parties" aria-labelledby="parties-h">
+    <div class="wrap">
+      <div class="head-row">
+        <h2 id="parties-h">Private room for parties</h2>
+        <div class="head-row__side"><p>Birthdays, office dinners and family get-togethers, up to 40&nbsp;guests.</p><a class="link" href="#visit">See opening hours<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+      </div>
+      <div class="pair">
+        <figure class="pair__item"><img src="assets/img/guests-800.webp" srcset="assets/img/guests-600.webp 600w, assets/img/guests-800.webp 800w, assets/img/guests.webp 1400w" sizes="(min-width: 1024px) 588px, 100vw" width="1400" height="1051" alt="The party hall with long tables under hanging lamps" loading="eager" decoding="async" data-source="library-unsplash" data-subject="party hall"></figure>
+        <figure class="pair__item"><img src="assets/img/thali-800.webp" srcset="assets/img/thali-600.webp 600w, assets/img/thali-800.webp 800w, assets/img/thali.webp 1400w" sizes="(min-width: 1024px) 588px, 100vw" width="1400" height="1051" alt="A thali with curry, dal, roti, raita and pickle" loading="eager" decoding="async" data-source="library-unsplash" data-subject="thali"></figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing footer--visit" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--word">
+      <div class="section-head--split">
+        <div><h2 id="close-h">Dinner tonight at Ghungroo</h2><p class="t-lead">Open daily, 12:00 to 23:00. Last order at 23:00.</p></div>
+        <a class="btn btn--primary" href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Get directions<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+      <p class="close__word" aria-hidden="true">Ghungroo</p>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-6 stack-4">
+          <address class="footer__address"><a class="link" href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Narmada Arcade, Snehapuri Colony, Nacharam</a></address>
+          <p class="muted">Above HDFC Bank, Hyderabad.</p>
+        </div>
+        <div class="span-6 start-7 stack-4">
+          <h4>Opening hours</h4>
+          <dl class="hours" data-tz="Asia/Kolkata"><dt data-days="mon-sun">Every day</dt><dd>12:00 to 23:00</dd></dl>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy;&nbsp;2026 Ghungroo Bar &amp; Restaurant. Alcohol served only to guests aged 21 and over. Brand names are trademarks of their owners.</span>
+        <a class="credits" href="credits.html">Photographs via Unsplash and Wikimedia Commons</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Quick actions">
+  <a class="btn btn--primary" href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Get directions</a>
+</nav>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+</body>
+</html>
