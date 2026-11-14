@@ -27,7 +27,8 @@ There is no party room or private room; do not add one. The previous light desig
 | Hours | Every day, 12 noon to 11 PM | Cvent listing |
 | Last order | 11 PM | Menu booklet ("Last Order 11-00 PM") |
 | Years open | 20 years | Owner |
-| Phone, email, socials | Not shown | Not supplied |
+| Takeaway phone | +91 93932 19992 (tap to call) | Owner |
+| Email, socials | Not shown | Not supplied |
 | Legal drinking age | 21 | Telangana rule |
 
 ## Photographs
