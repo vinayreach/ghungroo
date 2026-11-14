@@ -24,8 +24,8 @@ There is no party room or private room; do not add one. The previous light desig
 | Item | Value used | Source |
 |---|---|---|
 | Address | Narmada Arcade, above HDFC Bank, Snehapuri Colony, Nacharam | Cvent listing, matches the Maps pin |
-| Hours | Every day, 12:00 to 23:00 (24-hour, so the "Open now" line works) | Cvent listing |
-| Last order | 23:00 | Menu booklet ("Last Order 11-00 PM") |
+| Hours | Every day, 12 noon to 11 PM | Cvent listing |
+| Last order | 11 PM | Menu booklet ("Last Order 11-00 PM") |
 | Years open | 20 years | Owner |
 | Phone, email, socials | Not shown | Not supplied |
 | Legal drinking age | 21 | Telangana rule |
