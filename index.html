@@ -1,393 +1,417 @@
 <!doctype html>
-<html lang="en" data-type="place" data-radius="soft" data-buttons="block" data-motion>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ghungroo Bar &amp; Restaurant: restaurant and bar in Nacharam, Hyderabad</title>
-<meta name="description" content="Ghungroo Bar &amp; Restaurant in Nacharam, Hyderabad: biryani, Andhra and Telangana curries, tandoor and a full bar for over 30 years. Open daily, 12:00 to 23:00.">
-<meta name="site-kind" content="other">
-<meta name="page-type" content="place">
-<meta name="page-kind" content="place">
+<title>Ghungroo Bar &amp; Restaurant · Nacharam, Hyderabad</title>
+<meta name="description" content="Ghungroo Bar &amp; Restaurant, Nacharam: a local favourite for 20 years. Biryani, Andhra and Telangana curries, tandoor and over 40 whiskies. Open daily, 12:00 to 23:00.">
+<meta name="theme-color" content="#17111a">
 <meta property="og:title" content="Ghungroo Bar &amp; Restaurant, Nacharam">
-<meta property="og:description" content="Biryani, Andhra curries and a full bar for over 30 years. Open daily, 12:00 to 23:00.">
-<meta property="og:image" content="assets/logo/ghungroo-logo-cocktail-magenta.png">
+<meta property="og:description" content="A Nacharam favourite for 20 years. Open daily, 12:00 to 23:00.">
+<meta property="og:image" content="assets/img/real-hero-full.webp">
 <link rel="icon" href="assets/logo/ghungroo-icon-cocktail.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..600&family=Libre+Franklin:wght@400..600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/system.css">
-<link rel="stylesheet" href="assets/ui/cards.css">
-<link rel="stylesheet" href="assets/motion/motion.css">
-<link rel="stylesheet" href="assets/layout/layout.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&family=Libre+Franklin:wght@400..600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/real-hero-full.webp" imagesrcset="assets/img/real-hero-full-900.webp 900w, assets/img/real-hero-full.webp 1600w" imagesizes="100vw">
 <style>
 :root {
-  --p-bg: #f7f3ec; --p-surface: #ede6da; --p-ink: #2a2622; --p-muted: #665e55;
-  --p-accent: #b8086a; --p-accent-ink: #f7f3ec; --p-action: #b8086a; --p-action-ink: #f7f3ec;
-  --p-inv-bg: #2a2622; --p-inv-surface: #36322e; --p-inv-ink: #f7f3ec; --p-inv-muted: #a29e98;
-  --p-inv-accent: #f7f3ec; --p-inv-accent-ink: #2a2622; --p-inv-action: #f7f3ec; --p-inv-action-ink: #2a2622;
-  --font-display: "Source Serif 4", Georgia, serif;
-  --font-text: "Libre Franklin", system-ui, sans-serif;
-  --display-weight: 400;
-  --display-tracking: -0.02em;
+  color-scheme: dark;
+  --bg: #17111a;          /* deep plum-charcoal */
+  --bg-2: #1f1722;        /* raised band */
+  --bg-3: #2a1f2c;
+  --ink: #f3ead9;         /* warm cream */
+  --muted: #bcae9c;
+  --line: rgb(243 234 217 / .14);
+  --gold: #d6ad52;
+  --gold-soft: rgb(214 173 82 / .16);
+  --magenta: #c8167f;
+  --magenta-hi: #a80f68;
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "Libre Franklin", system-ui, sans-serif;
+  --wrap: min(1240px, 100% - 2 * clamp(20px, 5vw, 72px));
+  --nav-h: 76px;
+  --ease: cubic-bezier(.22, .8, .24, 1);
 }
-</style>
-<!-- page CSS: the place compositions (strip, tall-small, pair) and the browser surfaces -->
-<style>
-  header.nav .nav__logo > .nav__logo-img { display: block; height: 54px; width: auto; max-width: none; }
-  @media (max-width: 639px) { header.nav .nav__logo > .nav__logo-img { height: 40px; } }
-  ::selection { background: #b8086a; color: #f7f3ec; }
-  .head-row { display: grid; gap: var(--s-4); margin-bottom: 48px; }
-  .head-row > h2 { margin: 0; }
-  .head-row__side { display: flex; align-items: baseline; gap: var(--s-5); flex-wrap: wrap; }
-  .head-row__side p { margin: 0; color: var(--muted); }
-  .group__label { margin: 0 0 12px; }
-  .rows--plain > li { padding-block: 10px; }
-  #food .strip { margin-top: var(--s-7); }
-  #food .strip .pl-photo { --pl-cap: 282px; }
-  #bar .side { display: flex; flex-direction: column; gap: var(--s-5); }
-  #bar .side > h2 { margin: 0; }
-  #bar .side > p { margin: 0; }
-  #bar .side > .link { align-self: flex-start; }
-  .brands { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-  .brands__item { margin: 0; overflow: hidden; background: var(--surface); }
-  .brands__item > img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; transition: transform .4s cubic-bezier(.2,.7,.2,1); }
-  .brands__item:hover > img { transform: scale(1.03); }
-  .wlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-  .wlist li { font-size: 16px; line-height: 24px; }
-  .collage { margin: 0; }
-  .collage > img { display: block; width: 100%; height: auto; }
-  .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gutter, 24px); }
-  .pair__item { margin: 0; overflow: hidden; }
-  .pair__item > img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
-  @media (min-width: 640px) and (max-width: 1023px) {
-    #food .grid > .span-4 { grid-column: auto / span 4; }
-    #whisky .grid > .span-3 { grid-column: auto / span 3; }
-    #food .strip > .pl-photo { grid-column: auto / span 3; }
-    #visit .pl-photo > img { aspect-ratio: 16 / 9; }
-    .brands { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-    .brands__item > img { aspect-ratio: 1 / 2; }
-    .pair__item > img { aspect-ratio: 2 / 3; }
-    #food .strip .pl-photo > img { aspect-ratio: 2 / 3; }
-  }
-  #visit .visit__head p { margin: 0; font-weight: 500; }
-  #visit .visit__cols { grid-template-columns: minmax(0, 1fr); }
-  #bar .groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5); }
-  .pl-photo a { display: block; overflow: hidden; }
-  #contact .close__word { line-height: 1.04; overflow: visible; font-size: clamp(64px, 12vw, 172px); }
-  @media (max-width: 639px) {
-    #food .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    #food .strip > .pl-photo { grid-column: auto; }
-    #food .strip .pl-photo > img { aspect-ratio: 2 / 3; }
-    #food .strip { gap: 12px; }
-    #bar .groups { gap: 12px; }
-    #whisky .grid > .span-3 { grid-column: auto / span 6; }
-    .brands { gap: 12px; }
-    #visit .pl-photo > img { aspect-ratio: 2 / 1; }
-    .pair { grid-template-columns: minmax(0, 1fr); }
-    .pair__item > img { aspect-ratio: 16 / 9; }
-  }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: 0s !important; animation: none !important; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.65 var(--sans); font-feature-settings: "kern" 1; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+a, button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+::selection { background: var(--magenta); color: #fff; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; margin: 0; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+.wrap { width: var(--wrap); margin-inline: auto; }
+.skip { position: absolute; left: 12px; top: 12px; z-index: 50; padding: 10px 14px; background: var(--ink); color: var(--bg); clip-path: inset(50%); }
+.skip:focus-visible { clip-path: none; }
+
+/* ---------- buttons and links */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; padding: 0 26px; border-radius: 999px;
+  font: 500 16px/1 var(--sans); text-decoration: none; border: 1px solid transparent; cursor: pointer;
+  transition: background-color .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease); }
+.btn:active { transform: translateY(1px) scale(.98); }
+.btn--primary { background: var(--magenta); color: #fff; }
+.btn--primary:hover { background: var(--magenta-hi); }
+.btn--ghost { border-color: rgb(243 234 217 / .45); color: var(--ink); }
+.btn--ghost:hover { border-color: var(--gold); color: var(--gold); }
+.btn svg { width: 14px; height: 14px; transition: transform .25s var(--ease); }
+.btn:hover svg, .link:hover svg { transform: translateX(3px); }
+.link { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); font-weight: 500; text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; padding-bottom: 2px; transition: background-size .35s var(--ease); }
+.link:hover { background-size: 100% 1px; }
+.link svg { width: 12px; height: 12px; transition: transform .25s var(--ease); }
+
+/* ---------- header */
+.nav { position: fixed; inset: 0 0 auto; z-index: 40; height: var(--nav-h); display: flex; align-items: center;
+  background: rgb(23 17 26 / .0); transition: background-color .35s var(--ease), border-color .35s var(--ease); border-bottom: 1px solid transparent; }
+.nav.is-solid { background: rgb(23 17 26 / .94); border-color: var(--line); backdrop-filter: saturate(1.2) blur(10px); }
+.nav__bar { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.nav__logo img { height: 50px; width: auto; }
+.nav__links { display: flex; align-items: center; gap: 30px; }
+.nav__links a:not(.btn) { font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink); opacity: .86;
+  background: linear-gradient(var(--gold), var(--gold)) 0 100% / 0 1px no-repeat; padding-bottom: 3px; transition: background-size .3s var(--ease), opacity .2s; }
+.nav__links a:not(.btn):hover { opacity: 1; background-size: 100% 1px; }
+.nav__links .btn { min-height: 44px; padding: 0 20px; font-size: 15px; }
+.nav__toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 999px; background: none; color: var(--ink); cursor: pointer; }
+@media (max-width: 900px) {
+  .nav__toggle { display: inline-grid; place-items: center; }
+  .nav__links { position: fixed; inset: var(--nav-h) 0 0; flex-direction: column; align-items: flex-start; gap: 0; padding: 12px clamp(20px, 5vw, 72px) 32px;
+    background: var(--bg); transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity .25s var(--ease), transform .25s var(--ease), visibility 0s .25s; }
+  .nav.is-open .nav__links { opacity: 1; transform: none; visibility: visible; transition-delay: 0s; }
+  .nav.is-open { background: var(--bg); }
+  .nav__links a:not(.btn) { width: 100%; padding: 18px 0; font: 400 26px/1.2 var(--serif); border-bottom: 1px solid var(--line); background: none; opacity: 1; }
+  .nav__links .btn { margin-top: 24px; width: 100%; min-height: 52px; }
+  .nav__logo img { height: 42px; }
+}
+
+/* ---------- hero */
+.hero { position: relative; min-height: 100svh; display: grid; align-items: end; overflow: hidden; isolation: isolate; }
+.hero__img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 70% 35%; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(90deg, rgb(23 17 26 / .9) 0%, rgb(23 17 26 / .78) 34%, rgb(23 17 26 / .25) 62%, rgb(23 17 26 / 0) 80%),
+    linear-gradient(180deg, rgb(23 17 26 / .6) 0%, rgb(23 17 26 / 0) 22%, rgb(23 17 26 / 0) 60%, rgb(23 17 26 / .85) 88%, var(--bg) 100%); }
+@media (max-width: 900px) { .hero::after { background: linear-gradient(180deg, rgb(23 17 26 / .55) 0%, rgb(23 17 26 / .1) 22%, rgb(23 17 26 / .55) 50%, rgb(23 17 26 / .95) 74%, var(--bg) 100%); } }
+.hero__content { padding: 0 0 clamp(48px, 9vh, 96px); }
+.hero h1 { font-size: clamp(42px, 6.4vw, 88px); line-height: 1.02; letter-spacing: -0.025em; max-width: 13ch; }
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero__lead { margin-top: 22px; font-size: clamp(18px, 1.6vw, 21px); color: var(--ink); opacity: .9; max-width: 34em; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+.status { display: inline-flex; align-items: center; gap: 10px; margin-top: 26px; font-size: 15px; color: var(--muted); }
+.status__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); box-shadow: 0 0 0 4px rgb(188 174 156 / .15); }
+.status.is-open .status__dot { background: #4fc27a; box-shadow: 0 0 0 4px rgb(79 194 122 / .18); }
+.status.is-open { color: var(--ink); }
+
+/* ---------- sections */
+.section { padding: clamp(80px, 12vw, 150px) 0; }
+.section--band { background: var(--bg-2); }
+.h2 { font-size: clamp(34px, 4.4vw, 58px); line-height: 1.06; }
+.h2 em { font-style: italic; color: var(--gold); }
+.lede { font-size: clamp(18px, 1.5vw, 20px); line-height: 1.7; color: var(--ink); opacity: .88; max-width: 36em; }
+.muted { color: var(--muted); }
+.rule { width: 56px; height: 1px; background: var(--gold); border: 0; margin: 28px 0; }
+
+.photo { position: relative; overflow: hidden; margin: 0; background: var(--bg-3); }
+.photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.1s var(--ease); }
+.photo:hover img { transform: scale(1.035); }
+
+/* story */
+.story { display: grid; grid-template-columns: 1.08fr 1fr; gap: clamp(40px, 6vw, 96px); align-items: center; }
+.story .photo { aspect-ratio: 4 / 3.3; border-radius: 4px; }
+.story__text .lede + .lede { margin-top: 18px; }
+.story__text .link { margin-top: 32px; }
+.gallery { display: grid; grid-template-columns: 1.15fr .85fr 1fr; gap: 16px; margin-top: clamp(56px, 7vw, 96px); }
+.gallery .photo { aspect-ratio: 4 / 5; border-radius: 4px; }
+.gallery .photo:nth-child(2) { aspect-ratio: auto; margin-top: 64px; }
+.gallery .photo:nth-child(3) { aspect-ratio: 1; align-self: end; }
+
+/* food */
+.food { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(40px, 6vw, 96px); align-items: start; }
+.food__head .lede { margin-top: 20px; }
+.menu { margin-top: 40px; display: grid; gap: 34px; }
+.menu h3 { font: 500 13px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.menu ul { list-style: none; margin: 0; padding: 0; }
+.menu li { display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 17px; }
+.menu li span.tag { margin-left: auto; font-size: 13px; color: var(--muted); white-space: nowrap; }
+.food__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.food__grid .photo { aspect-ratio: 1; border-radius: 4px; }
+.food__grid .photo:nth-child(2) { transform: translateY(40px); }
+.food__grid .photo:nth-child(4) { transform: translateY(40px); }
+
+/* bar */
+.bar { display: grid; grid-template-columns: 1fr 1fr; min-height: min(92vh, 860px); }
+.bar .photo { min-height: 460px; }
+.bar__text { padding: clamp(56px, 7vw, 110px) clamp(24px, 6vw, 96px); display: flex; flex-direction: column; justify-content: center; background: var(--bg-2); }
+.bar__text .lede { margin-top: 20px; }
+.brands { margin-top: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+.brands h3 { grid-column: span 1; font: 500 13px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 0 0 10px; }
+.brands ul { list-style: none; margin: 0; padding: 0; }
+.brands li { padding: 9px 0; border-bottom: 1px solid var(--line); }
+.bar__text .link { margin-top: 32px; align-self: flex-start; }
+
+/* whisky */
+.whisky__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px 64px; }
+.whisky__head .lede { max-width: 28em; }
+.whisky__cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 56px; }
+.whisky__cols h3 { font: 500 13px/1.3 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 0 0 16px; padding-bottom: 14px; border-bottom: 1px solid var(--gold-soft); }
+.whisky__cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; font-size: 16px; }
+.whisky__collage { margin-top: clamp(56px, 7vw, 88px); border-radius: 4px; }
+.whisky__collage img { aspect-ratio: 2380 / 1048; }
+
+/* visit */
+.visit { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(40px, 6vw, 96px); align-items: center; }
+.visit .photo { aspect-ratio: 4 / 3; border-radius: 4px; }
+.visit dl { margin: 36px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 0 28px; }
+.visit dt { padding: 16px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 15px; }
+.visit dd { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.visit__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+
+/* footer */
+.footer { border-top: 1px solid var(--line); padding: 64px 0 40px; }
+.footer__top { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; }
+.footer__top img { height: 64px; width: auto; }
+.footer h4 { font: 500 13px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 6px 0 14px; }
+.footer p, .footer a { color: var(--muted); font-size: 15px; }
+.footer a { text-decoration: none; } .footer a:hover { color: var(--ink); }
+.footer__legal { margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--muted); }
+.footer__legal a { font-size: 13px; text-decoration: underline; text-underline-offset: 3px; }
+
+/* phone action bar */
+.actionbar { display: none; }
+
+/* ---------- responsive */
+@media (max-width: 900px) {
+  .story, .food, .visit { grid-template-columns: 1fr; }
+  .story .photo { order: -1; }
+  .gallery { grid-template-columns: 1fr 1fr; }
+  .gallery .photo:first-child { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+  .gallery .photo:nth-child(2) { margin-top: 0; aspect-ratio: 1; }
+  .food__grid .photo:nth-child(2), .food__grid .photo:nth-child(4) { transform: none; }
+  .bar { grid-template-columns: 1fr; min-height: 0; }
+  .bar .photo { min-height: 0; aspect-ratio: 4 / 3; }
+  .whisky__cols { grid-template-columns: 1fr 1fr; gap: 36px 24px; }
+  .footer__top { grid-template-columns: 1fr 1fr; }
+  .footer__top > :first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  body { font-size: 16px; padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  .hero__actions .btn { flex: 1 1 100%; }
+  .brands { grid-template-columns: 1fr; gap: 28px; }
+  .whisky__cols ul { font-size: 15px; }
+  .whisky__collage img { aspect-ratio: 4 / 3; object-position: 0 50%; }
+  .footer__top { grid-template-columns: 1fr; }
+  .actionbar { display: flex; position: fixed; inset: auto 0 0; z-index: 30; padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    background: rgb(23 17 26 / .96); border-top: 1px solid var(--line); backdrop-filter: blur(10px); }
+  .actionbar .btn { width: 100%; }
+}
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Restaurant",
+  "@type": "BarOrPub",
   "name": "Ghungroo Bar & Restaurant",
-  "description": "Restaurant and bar in Nacharam, Hyderabad, serving biryani, Andhra and Telangana curries, tandoor and Indo-Chinese dishes for over 30 years.",
+  "description": "Bar and restaurant in Nacharam, Hyderabad, a local favourite for 20 years: biryani, Andhra and Telangana curries, tandoor and over 40 whiskies.",
   "servesCuisine": ["Hyderabadi", "Andhra", "Telangana", "North Indian", "Tandoor", "Indo-Chinese"],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Narmada Arcade, above HDFC Bank, Snehapuri Colony",
-    "addressLocality": "Nacharam, Hyderabad",
-    "addressRegion": "Telangana",
-    "addressCountry": "IN"
-  },
+  "address": { "@type": "PostalAddress", "streetAddress": "Narmada Arcade, above HDFC Bank, Snehapuri Colony", "addressLocality": "Nacharam, Hyderabad", "addressRegion": "Telangana", "addressCountry": "IN" },
   "hasMap": "https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9",
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "12:00", "closes": "23:00"
-  }],
-  "acceptsReservations": false,
-  "image": "assets/img/hero-bar-room.webp"
+  "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "12:00", "closes": "23:00" }],
+  "image": "assets/img/real-hero-full.webp",
+  "logo": "assets/logo/ghungroo-icon-cocktail.png"
 }
 </script>
 </head>
 <body>
-<!-- type: place (restaurant and bar)
-     deal: hero place (printed), nav nav-split, footer footer-visit, close close-word (type moment: name),
-     rhythm surface-pairs, buttons block, mark petal, offer strip, place pair, rooms not used
-     moments: none (place) · photographs: 10 Unsplash stand-ins, listed in README.md for the client to replace -->
+<a class="skip" href="#story">Skip to content</a>
 
-<header class="nav nav--split">
+<header class="nav" id="nav">
   <div class="wrap nav__bar">
-    <a class="nav__logo" href="#top" aria-label="Ghungroo Bar &amp; Restaurant, home"><img class="nav__logo-img" src="assets/logo/ghungroo-logo-cocktail-horizontal.svg" alt="Ghungroo Bar &amp; Restaurant" width="502" height="150"></a>
-    <nav class="nav__links" aria-label="Main">
-      <div class="nav__item">
-        <a class="nav__link" href="#food">Food <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <div class="nav__menu">
-          <div class="wrap grid">
-            <a class="menu-card span-3" href="#food"><div class="panel"><img class="frame__img" src="assets/img/biryani-800.webp" srcset="assets/img/biryani-600.webp 600w, assets/img/biryani-800.webp 800w, assets/img/biryani.webp 1000w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1000" height="1000" alt="Biryani in a kadai" loading="lazy"></div><span class="t-card">Biryani</span><span class="t-small muted">Keema, chicken, mutton, prawn</span></a>
-            <a class="menu-card span-3" href="#food"><div class="panel"><img class="frame__img" src="assets/img/fish-curry-800.webp" srcset="assets/img/fish-curry-600.webp 600w, assets/img/fish-curry-800.webp 800w, assets/img/fish-curry.webp 1068w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1068" height="1068" alt="Curries with rice and whole spices" loading="lazy"></div><span class="t-card">Andhra curries</span><span class="t-small muted">Chepala pulusu, gongura mutton</span></a>
-            <a class="menu-card span-3" href="#food"><div class="panel"><img class="frame__img" src="assets/img/kebabs-800.webp" srcset="assets/img/kebabs-600.webp 600w, assets/img/kebabs-800.webp 800w, assets/img/kebabs.webp 1067w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1067" height="1067" alt="Tandoori chicken from the tandoor" loading="lazy"></div><span class="t-card">Tandoor</span><span class="t-small muted">Kalmi kebab, tikka, fish tikka</span></a>
-            <a class="menu-card span-3" href="#whisky"><div class="panel"><img class="frame__img" src="assets/img/indian-collage-800.webp" width="972" height="480" alt="Bottles of Royal Challenge, Royal Stag, McDowell&rsquo;s No.1 and Black Dog" loading="lazy"></div><span class="t-card">Whisky list</span><span class="t-small muted">Over 40 Scotch and Indian whiskies</span></a>
-          </div>
-        </div>
-      </div>
-      <div class="nav__item"><a class="nav__link" href="#bar">Bar</a></div>
-      <div class="nav__item"><a class="nav__link" href="#parties">Parties</a></div>
-      <div class="nav__item"><a class="nav__link" href="#visit">Visit</a></div>
-    </nav>
-    <div class="nav__actions">
+    <a class="nav__logo" href="#top" aria-label="Ghungroo Bar &amp; Restaurant, back to top"><img src="assets/logo/ghungroo-logo-cocktail-horizontal-on-dark.svg" alt="Ghungroo Bar &amp; Restaurant" width="502" height="150"></a>
+    <nav class="nav__links" id="menu" aria-label="Main">
+      <a href="#story">Our story</a>
+      <a href="#food">Food</a>
+      <a href="#bar">Bar</a>
+      <a href="#whisky">Whisky list</a>
+      <a href="#visit">Visit</a>
       <a class="btn btn--primary" href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Get directions</a>
-    </div>
-    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+    </nav>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
       <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
     </button>
   </div>
 </header>
 
 <main id="top">
-  <section class="hero hero--place" aria-labelledby="hero-h">
-    <img class="hero__bg" src="assets/img/hero-bar-room-1200.webp" srcset="assets/img/hero-bar-room-800.webp 800w, assets/img/hero-bar-room-1200.webp 1200w, assets/img/hero-bar-room.webp 3000w" sizes="100vw" width="3000" height="1000" alt="Three lit bar shelves holding sixty bottles of whisky, rum, gin, vodka and beer" style="--ly-pos: 50% 50%" fetchpriority="high" data-source="wikimedia" data-subject="bar shelves">
-    <div class="wrap"><div class="hero-text">
-      <div class="hero__text">
-        <h1 id="hero-h">Restaurant and bar in Nacharam</h1>
-        <p class="hero__lead">Biryani, Andhra curries and a full bar for 30&nbsp;years. Open daily 12:00 to 23:00.</p>
-        <div class="btn-row"><a class="btn btn--primary" href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Get directions<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+  <section class="hero" aria-labelledby="hero-h">
+    <img class="hero__img" src="assets/img/real-hero-full.webp" srcset="assets/img/real-hero-full-900.webp 900w, assets/img/real-hero-full.webp 1600w" sizes="100vw" width="1600" height="1000" alt="The lit back bar at Ghungroo, glass shelves stocked with whisky, rum and gin under marigold garlands" fetchpriority="high">
+    <div class="wrap hero__content">
+      <h1 id="hero-h">Nacharam&rsquo;s bar &amp; restaurant for <em>20&nbsp;years</em></h1>
+      <p class="hero__lead">Biryani, Andhra curries and over 40 whiskies, loved by locals since the day we opened.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Get directions <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5 10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn--ghost" href="#whisky">See the whisky list</a>
       </div>
-    </div></div>
+      <p class="status" id="status"><span class="status__dot" aria-hidden="true"></span><span id="status-text">Open daily, 12:00 to 23:00</span></p>
+    </div>
   </section>
 
-  <section class="section" id="visit" data-place="visit" aria-labelledby="visit-h">
+  <section class="section" id="story" aria-labelledby="story-h">
     <div class="wrap">
-      <div class="section-head"><h2 id="visit-h">Visit</h2></div>
-      <div class="grid grid--top">
-        <div class="visit visit--card span-6">
-          <div class="visit__head"><p data-open-now></p></div>
-          <div class="visit__cols">
-            <div class="visit__col stack-4">
-              <address class="visit__address"><a class="link" href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Narmada Arcade, above HDFC&nbsp;Bank<br>Snehapuri Colony, Nacharam, Hyderabad</a></address>
-            </div>
-            <div class="visit__col">
-              <dl class="hours" data-tz="Asia/Kolkata"><dt data-days="mon-sun">Every day</dt><dd>12:00 to 23:00</dd></dl>
-            </div>
-          </div>
-          <ul class="visit__rows">
-            <li><span>Last order</span><span>23:00</span></li>
-            <li><span>Private room</span><span>Up to 40&nbsp;guests</span></li>
-          </ul>
+      <div class="story">
+        <figure class="photo"><img src="assets/img/real-story-hosts.webp" srcset="assets/img/real-story-hosts-600.webp 600w, assets/img/real-story-hosts.webp 801w" sizes="(min-width: 900px) 620px, 100vw" width="801" height="601" alt="Ghungroo&rsquo;s hosts standing in the main dining hall" loading="lazy"></figure>
+        <div class="story__text">
+          <h2 class="h2" id="story-h">Twenty years of evenings in <em>Nacharam</em></h2>
+          <hr class="rule">
+          <p class="lede">For 20&nbsp;years, Ghungroo has been the neighbourhood&rsquo;s bar and restaurant. Locals come in after work, friends meet over a peg and a plate of Chicken&nbsp;65, and families come back for the keema biryani.</p>
+          <p class="lede">The same hosts welcome you at the door, the kitchen cooks the recipes that made our name, and the bar pours the brands Nacharam asks for.</p>
+          <a class="link" href="#food">See what we cook <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5 10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
-        <figure class="pl-photo span-6 start-7" style="--pl-r: 1.3333"><img src="assets/img/dining-room-800.webp" srcset="assets/img/dining-room-600.webp 600w, assets/img/dining-room-800.webp 800w, assets/img/dining-room.webp 1400w" sizes="(min-width: 1024px) 588px, 100vw" width="1400" height="1050" alt="Dining room with wooden shelves of brass vessels" loading="lazy" data-source="library-unsplash" data-subject="dining room"></figure>
+      </div>
+      <div class="gallery">
+        <figure class="photo"><img src="assets/img/real-trio-hall-800.webp" srcset="assets/img/real-trio-hall-600.webp 600w, assets/img/real-trio-hall-800.webp 800w, assets/img/real-trio-hall.webp 853w" sizes="(min-width: 900px) 440px, 100vw" width="853" height="1066" alt="The main dining hall, tables set around the round sofa" loading="lazy"></figure>
+        <figure class="photo"><img src="assets/img/real-story-team-800.webp" srcset="assets/img/real-story-team-600.webp 600w, assets/img/real-story-team-800.webp 800w, assets/img/real-story-team.webp 1421w" sizes="(min-width: 900px) 330px, 50vw" width="1421" height="1066" alt="The Ghungroo kitchen team at their stations" loading="lazy"></figure>
+        <figure class="photo"><img src="assets/img/real-trio-table-800.webp" srcset="assets/img/real-trio-table-600.webp 600w, assets/img/real-trio-table-800.webp 800w, assets/img/real-trio-table.webp 1066w" sizes="(min-width: 900px) 390px, 50vw" width="1066" height="1066" alt="A long table set for a group in the second dining hall" loading="lazy"></figure>
       </div>
     </div>
   </section>
 
-  <section class="section ground-surface" id="food" style="--h: 1; --hm: 2" aria-labelledby="food-h">
-    <div class="wrap">
-      <div class="head-row">
-        <h2 id="food-h">Biryani, curries and tandoor</h2>
-        <div class="head-row__side"><p>Cooked to the same recipes for 30&nbsp;years.</p><a class="link" href="#bar">See the bar<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
-      </div>
-      <div class="grid grid--top">
-        <div class="span-4">
-          <p class="t-label group__label">Biryani</p>
-          <ul class="rows rows--plain">
-            <li><span class="rows__name">Ghungroo special keema biryani</span></li>
-            <li><span class="rows__name">Chicken biryani, boneless</span></li>
-            <li><span class="rows__name">Prawns biryani</span></li>
-            <li><span class="rows__name">Family packs to take home</span></li>
-          </ul>
-        </div>
-        <div class="span-4">
-          <p class="t-label group__label">Andhra and Telangana</p>
-          <ul class="rows rows--plain">
-            <li><span class="rows__name">Ghungroo special chepala pulusu</span></li>
-            <li><span class="rows__name">Gongura mutton</span></li>
-            <li><span class="rows__name">Natu kodi pulusu</span></li>
-            <li><span class="rows__name">Telangana chicken</span></li>
-          </ul>
-        </div>
-        <div class="span-4">
-          <p class="t-label group__label">Tandoor and starters</p>
-          <ul class="rows rows--plain">
-            <li><span class="rows__name">Kalmi kebab</span></li>
-            <li><span class="rows__name">Ajwain fish tikka</span></li>
-            <li><span class="rows__name">Chicken 65</span></li>
-            <li><span class="rows__name">Loose prawns</span></li>
-          </ul>
+  <section class="section section--band" id="food" aria-labelledby="food-h">
+    <div class="wrap food">
+      <div class="food__head">
+        <h2 class="h2" id="food-h">From our kitchen</h2>
+        <p class="lede">The same recipes for 20&nbsp;years: dum biryani, fiery Andhra curries and kebabs from the tandoor.</p>
+        <div class="menu">
+          <div><h3>Biryani</h3><ul>
+            <li>Ghungroo special keema biryani <span class="tag">House special</span></li>
+            <li>Chicken biryani, boneless</li>
+            <li>Prawns biryani</li>
+            <li>Family packs <span class="tag">To take home</span></li>
+          </ul></div>
+          <div><h3>Andhra and Telangana</h3><ul>
+            <li>Ghungroo special chepala pulusu <span class="tag">House special</span></li>
+            <li>Gongura mutton</li>
+            <li>Natu kodi pulusu</li>
+          </ul></div>
+          <div><h3>Tandoor and starters</h3><ul>
+            <li>Kalmi kebab</li>
+            <li>Chicken 65</li>
+            <li>Loose prawns</li>
+          </ul></div>
         </div>
       </div>
-      <div class="grid strip">
-        <figure class="pl-photo span-3" style="--pl-r: 1"><img src="assets/img/biryani-800.webp" srcset="assets/img/biryani-600.webp 600w, assets/img/biryani-800.webp 800w, assets/img/biryani.webp 1000w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1000" height="1000" alt="Biryani in a kadai" loading="lazy" data-source="library-unsplash" data-subject="biryani"></figure>
-        <figure class="pl-photo span-3" style="--pl-r: 1"><img src="assets/img/fish-curry-800.webp" srcset="assets/img/fish-curry-600.webp 600w, assets/img/fish-curry-800.webp 800w, assets/img/fish-curry.webp 1068w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1068" height="1068" alt="Curries with rice and whole spices" loading="lazy" data-source="library-unsplash" data-subject="fish curry"></figure>
-        <figure class="pl-photo span-3" style="--pl-r: 1"><img src="assets/img/kebabs-800.webp" srcset="assets/img/kebabs-600.webp 600w, assets/img/kebabs-800.webp 800w, assets/img/kebabs.webp 1067w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1067" height="1067" alt="Tandoori chicken from the tandoor" loading="lazy" data-source="library-unsplash" data-subject="kebabs"></figure>
-        <figure class="pl-photo span-3" style="--pl-r: 1"><img src="assets/img/curry-naan-800.webp" srcset="assets/img/curry-naan-600.webp 600w, assets/img/curry-naan-800.webp 800w, assets/img/curry-naan.webp 1068w" sizes="(min-width: 1024px) 282px, (min-width: 640px) 25vw, 50vw" width="1068" height="1068" alt="Palak curry with roti" loading="lazy" data-source="library-unsplash" data-subject="curry and naan"></figure>
+      <div class="food__grid">
+        <figure class="photo"><img src="assets/img/biryani-800.webp" srcset="assets/img/biryani-600.webp 600w, assets/img/biryani-800.webp 800w" sizes="(min-width: 900px) 300px, 50vw" width="1000" height="1000" alt="Biryani in a kadai" loading="lazy"></figure>
+        <figure class="photo"><img src="assets/img/fish-curry-800.webp" srcset="assets/img/fish-curry-600.webp 600w, assets/img/fish-curry-800.webp 800w" sizes="(min-width: 900px) 300px, 50vw" width="1068" height="1068" alt="Curries with rice and whole spices" loading="lazy"></figure>
+        <figure class="photo"><img src="assets/img/kebabs-800.webp" srcset="assets/img/kebabs-600.webp 600w, assets/img/kebabs-800.webp 800w" sizes="(min-width: 900px) 300px, 50vw" width="1067" height="1067" alt="Tandoori chicken from the tandoor" loading="lazy"></figure>
+        <figure class="photo"><img src="assets/img/real-kitchen-chef-800.webp" srcset="assets/img/real-kitchen-chef-600.webp 600w, assets/img/real-kitchen-chef-800.webp 800w" sizes="(min-width: 900px) 300px, 50vw" width="1600" height="900" alt="A Ghungroo chef preparing vegetables in the kitchen" loading="lazy"></figure>
       </div>
     </div>
   </section>
 
-  <section class="section" id="bar" style="--h: 1" aria-labelledby="bar-h">
-    <div class="wrap">
-      <div class="grid grid--top">
-        <div class="side span-6">
-          <h2 id="bar-h">Indian whisky, rum and beer at the bar</h2>
-          <p>Royal Stag, McDowell&rsquo;s, Black Dog and Old Monk by the 30&nbsp;ml peg or the bottle, and chilled Kingfisher and Bira 91.</p>
-          <div class="groups">
-            <div>
-              <p class="t-label group__label">Whisky and rum</p>
-              <ul class="rows rows--plain">
-                <li><span class="rows__name">Royal Stag</span></li>
-                <li><span class="rows__name">McDowell&rsquo;s No.1</span></li>
-                <li><span class="rows__name">Blender&rsquo;s Pride</span></li>
-                <li><span class="rows__name">Black Dog</span></li>
-                <li><span class="rows__name">Old Monk</span></li>
-              </ul>
-            </div>
-            <div>
-              <p class="t-label group__label">Beer</p>
-              <ul class="rows rows--plain">
-                <li><span class="rows__name">Kingfisher</span></li>
-                <li><span class="rows__name">Kingfisher Ultra</span></li>
-                <li><span class="rows__name">Haywards 5000</span></li>
-                <li><span class="rows__name">Bira 91</span></li>
-                <li><span class="rows__name">Budweiser</span></li>
-              </ul>
-            </div>
-          </div>
-          <a class="link" href="#parties">See the private room<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+  <section id="bar" aria-labelledby="bar-h">
+    <div class="bar">
+      <figure class="photo"><img src="assets/img/real-bar-side-800.webp" srcset="assets/img/real-bar-side-600.webp 600w, assets/img/real-bar-side-800.webp 800w, assets/img/real-bar-side.webp 853w" sizes="(min-width: 900px) 50vw, 100vw" width="853" height="1066" alt="The bar at Ghungroo: shelves of whisky and a Kingfisher beer fridge, with marigold garlands" loading="lazy"></figure>
+      <div class="bar__text">
+        <h2 class="h2" id="bar-h">A peg, a pint, and old friends</h2>
+        <p class="lede">Indian and imported whisky by the 30&nbsp;ml peg or the bottle, rum, and chilled beer straight from the fridge.</p>
+        <div class="brands" translate="no">
+          <div><h3>Whisky &amp; rum</h3><ul><li>Royal Stag</li><li>McDowell&rsquo;s No.1</li><li>Blender&rsquo;s Pride</li><li>Black Dog</li><li>Old Monk</li></ul></div>
+          <div><h3>Beer</h3><ul><li>Kingfisher</li><li>Kingfisher Ultra</li><li>Haywards 5000</li><li>Bira 91</li><li>Budweiser</li></ul></div>
         </div>
-        <div class="brands span-6 start-7">
-          <figure class="brands__item"><img src="assets/img/brand-royal-stag.webp" width="600" height="800" alt="A bottle of Royal Stag whisky" loading="lazy" data-source="wikimedia" data-subject="royal-stag"></figure>
-          <figure class="brands__item"><img src="assets/img/brand-mcdowells.webp" width="600" height="800" alt="A bottle of McDowell's No.1 whisky" loading="lazy" data-source="wikimedia" data-subject="mcdowells"></figure>
-          <figure class="brands__item"><img src="assets/img/brand-black-dog.webp" width="600" height="800" alt="A bottle of Black Dog Centenary whisky" loading="lazy" data-source="wikimedia" data-subject="black-dog"></figure>
-          <figure class="brands__item"><img src="assets/img/brand-old-monk.webp" width="600" height="800" alt="A bottle of Old Monk rum" loading="lazy" data-source="wikimedia" data-subject="old-monk"></figure>
-          <figure class="brands__item"><img src="assets/img/brand-kingfisher.webp" width="600" height="800" alt="A bottle of Kingfisher beer with a glass" loading="lazy" data-source="wikimedia" data-subject="kingfisher"></figure>
-          <figure class="brands__item"><img src="assets/img/brand-bira.webp" width="600" height="800" alt="A bottle of Bira 91 beer" loading="lazy" data-source="wikimedia" data-subject="bira"></figure>
-        </div>
+        <a class="link" href="#whisky">See the full whisky list <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5 10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
   </section>
 
-  <section class="section g2" id="whisky" style="--h: 2" aria-labelledby="whisky-h">
+  <section class="section" id="whisky" aria-labelledby="whisky-h">
     <div class="wrap">
-      <div class="group">
-        <div class="head-row">
-          <h2 id="whisky-h">Whisky by the peg or the bottle</h2>
-          <div class="head-row__side"><p>Over 40 imported, Scotch and Indian whiskies, poured in 30 or 60&nbsp;ml.</p></div>
-        </div>
-        <div class="grid grid--top">
-        <div class="span-3">
-          <p class="t-label group__label">Imported and aged Scotch</p>
-          <ul class="wlist">
-            <li>Chivas Regal 12</li>
-            <li>Johnnie Walker Black Label</li>
-            <li>Johnnie Walker Red Label</li>
-            <li>Johnnie Walker Blonde</li>
-            <li>Ballantine&rsquo;s</li>
-            <li>Jameson</li>
-            <li>Jim Beam</li>
-            <li>100 Pipers 12 and 8</li>
-            <li>Teacher&rsquo;s 50</li>
-            <li>Teacher&rsquo;s Reserve</li>
-            <li>Teacher&rsquo;s 12</li>
-          </ul>
-        </div>
-        <div class="span-3">
-          <p class="t-label group__label">Scotch</p>
-          <ul class="wlist">
-            <li>100 Pipers</li>
-            <li>Something Special</li>
-            <li>Dewar&rsquo;s</li>
-            <li>Black &amp; White</li>
-            <li>Teacher&rsquo;s Highland Cream</li>
-            <li>Black Dog Black Reserve</li>
-            <li>Black Dog Gold Reserve</li>
-            <li>William Lawson&rsquo;s</li>
-            <li>VAT 69</li>
-            <li>Grant&rsquo;s</li>
-          </ul>
-        </div>
-        <div class="span-3">
-          <p class="t-label group__label">Premium Indian whisky</p>
-          <ul class="wlist">
-            <li>Blender&rsquo;s Pride Reserve</li>
-            <li>Blender&rsquo;s Pride</li>
-            <li>Royal Stag Barrel Select</li>
-            <li>Signature</li>
-            <li>Antiquity Blue</li>
-            <li>Oaken Glow</li>
-            <li>Oaksmith Gold</li>
-            <li>Oaksmith Silver</li>
-            <li>American Pride</li>
-            <li>Royal Challenge</li>
-            <li>Legacy</li>
-          </ul>
-        </div>
-        <div class="span-3">
-          <p class="t-label group__label">Deluxe and regular</p>
-          <ul class="wlist">
-            <li>Royal Stag</li>
-            <li>McDowell&rsquo;s Platinum</li>
-            <li>McDowell&rsquo;s No.1</li>
-            <li>Imperial Blue</li>
-          </ul>
-        </div>
-        </div>
+      <div class="whisky__head">
+        <h2 class="h2" id="whisky-h">The whisky list</h2>
+        <p class="lede">Over 40 imported, Scotch and Indian whiskies, poured in 30 or 60&nbsp;ml.</p>
       </div>
-      <div class="group">
-        <figure class="collage"><img src="assets/img/whisky-collage-1200.webp" srcset="assets/img/whisky-collage-800.webp 800w, assets/img/whisky-collage-1200.webp 1200w, assets/img/whisky-collage.webp 2380w" sizes="(min-width: 1440px) 1200px, 100vw" width="2380" height="1048" alt="Twelve whisky bottles: Chivas Regal, Johnnie Walker Black and Red Label, Ballantine&rsquo;s, Jameson, Jim Beam, 100 Pipers, Teacher&rsquo;s, Dewar&rsquo;s, Black &amp; White, VAT 69 and William Lawson&rsquo;s" loading="lazy" data-source="wikimedia" data-subject="whisky collage"></figure>
+      <div class="whisky__cols" translate="no">
+        <div><h3>Imported &amp; aged</h3><ul>
+          <li>Chivas Regal 12</li><li>Johnnie Walker Black Label</li><li>Johnnie Walker Red Label</li><li>Johnnie Walker Blonde</li><li>Ballantine&rsquo;s</li><li>Jameson</li><li>Jim Beam</li><li>100 Pipers 12 &amp; 8</li><li>Teacher&rsquo;s 50</li><li>Teacher&rsquo;s Reserve</li><li>Teacher&rsquo;s 12</li>
+        </ul></div>
+        <div><h3>Scotch</h3><ul>
+          <li>100 Pipers</li><li>Something Special</li><li>Dewar&rsquo;s</li><li>Black &amp; White</li><li>Teacher&rsquo;s Highland Cream</li><li>Black Dog Black Reserve</li><li>Black Dog Gold Reserve</li><li>William Lawson&rsquo;s</li><li>VAT 69</li><li>Grant&rsquo;s</li>
+        </ul></div>
+        <div><h3>Premium Indian</h3><ul>
+          <li>Blender&rsquo;s Pride Reserve</li><li>Blender&rsquo;s Pride</li><li>Royal Stag Barrel Select</li><li>Signature</li><li>Antiquity Blue</li><li>Oaken Glow</li><li>Oaksmith Gold</li><li>Oaksmith Silver</li><li>American Pride</li><li>Royal Challenge</li><li>Legacy</li>
+        </ul></div>
+        <div><h3>Deluxe &amp; regular</h3><ul>
+          <li>Royal Stag</li><li>McDowell&rsquo;s Platinum</li><li>McDowell&rsquo;s No.1</li><li>Imperial Blue</li>
+        </ul></div>
       </div>
+      <figure class="photo whisky__collage"><img src="assets/img/whisky-collage-1200.webp" srcset="assets/img/whisky-collage-800.webp 800w, assets/img/whisky-collage-1200.webp 1200w, assets/img/whisky-collage.webp 2380w" sizes="(min-width: 1300px) 1240px, 100vw" width="2380" height="1048" alt="Twelve whisky bottles: Chivas Regal, Johnnie Walker, Ballantine&rsquo;s, Jameson, Jim Beam, 100 Pipers, Teacher&rsquo;s, Dewar&rsquo;s, Black &amp; White, VAT 69 and William Lawson&rsquo;s" loading="lazy"></figure>
     </div>
   </section>
 
-  <section class="section" id="parties" aria-labelledby="parties-h">
-    <div class="wrap">
-      <div class="head-row">
-        <h2 id="parties-h">Private room for parties</h2>
-        <div class="head-row__side"><p>Birthdays, office dinners and family get-togethers, up to 40&nbsp;guests.</p><a class="link" href="#visit">See opening hours<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
-      </div>
-      <div class="pair">
-        <figure class="pair__item"><img src="assets/img/guests-800.webp" srcset="assets/img/guests-600.webp 600w, assets/img/guests-800.webp 800w, assets/img/guests.webp 1400w" sizes="(min-width: 1024px) 588px, 100vw" width="1400" height="1051" alt="The party hall with long tables under hanging lamps" loading="eager" decoding="async" data-source="library-unsplash" data-subject="party hall"></figure>
-        <figure class="pair__item"><img src="assets/img/thali-800.webp" srcset="assets/img/thali-600.webp 600w, assets/img/thali-800.webp 800w, assets/img/thali.webp 1400w" sizes="(min-width: 1024px) 588px, 100vw" width="1400" height="1051" alt="A thali with curry, dal, roti, raita and pickle" loading="eager" decoding="async" data-source="library-unsplash" data-subject="thali"></figure>
+  <section class="section section--band" id="visit" aria-labelledby="visit-h">
+    <div class="wrap visit">
+      <figure class="photo"><img src="assets/img/real-visit-front-night-800.webp" srcset="assets/img/real-visit-front-night-600.webp 600w, assets/img/real-visit-front-night-800.webp 800w, assets/img/real-visit-front-night.webp 1421w" sizes="(min-width: 900px) 640px, 100vw" width="1421" height="1066" alt="Ghungroo at night, its sign lit above HDFC Bank in Nacharam" loading="lazy"></figure>
+      <div>
+        <h2 class="h2" id="visit-h">Find us above HDFC&nbsp;Bank</h2>
+        <dl>
+          <dt>Address</dt><dd>Narmada Arcade, Snehapuri Colony, Nacharam, Hyderabad</dd>
+          <dt>Open</dt><dd>Every day, 12:00 to 23:00</dd>
+          <dt>Last order</dt><dd>23:00</dd>
+        </dl>
+        <div class="visit__actions">
+          <a class="btn btn--primary" href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Get directions <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5 10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="footer closing footer--visit" id="contact" aria-labelledby="close-h">
+<footer class="footer">
   <div class="wrap">
-    <div class="closing__cta close--word">
-      <div class="section-head--split">
-        <div><h2 id="close-h">Dinner tonight at Ghungroo</h2><p class="t-lead">Open daily, 12:00 to 23:00. Last order at 23:00.</p></div>
-        <a class="btn btn--primary" href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Get directions<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
-      </div>
-      <p class="close__word" aria-hidden="true">Ghungroo</p>
+    <div class="footer__top">
+      <div><img src="assets/logo/ghungroo-logo-cocktail-horizontal-on-dark.svg" alt="Ghungroo Bar &amp; Restaurant" width="502" height="150" loading="lazy"><p style="margin-top:16px">A Nacharam favourite for 20&nbsp;years.</p></div>
+      <div><h4>Visit</h4><p>Narmada Arcade, above HDFC&nbsp;Bank<br>Snehapuri Colony, Nacharam, Hyderabad</p><p style="margin-top:10px"><a href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Open in Google Maps</a></p></div>
+      <div><h4>Hours</h4><p>Every day, 12:00 to 23:00<br>Last order 23:00</p></div>
     </div>
-    <div class="closing__links">
-      <div class="grid">
-        <div class="span-6 stack-4">
-          <address class="footer__address"><a class="link" href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Narmada Arcade, Snehapuri Colony, Nacharam</a></address>
-          <p class="muted">Above HDFC Bank, Hyderabad.</p>
-        </div>
-        <div class="span-6 start-7 stack-4">
-          <h4>Opening hours</h4>
-          <dl class="hours" data-tz="Asia/Kolkata"><dt data-days="mon-sun">Every day</dt><dd>12:00 to 23:00</dd></dl>
-        </div>
-      </div>
-      <div class="footer__legal">
-        <span>&copy;&nbsp;2026 Ghungroo Bar &amp; Restaurant. Alcohol served only to guests aged 21 and over. Brand names are trademarks of their owners.</span>
-        <a class="credits" href="credits.html">Photographs via Unsplash and Wikimedia Commons</a>
-      </div>
+    <div class="footer__legal">
+      <span>&copy;&nbsp;2026 Ghungroo Bar &amp; Restaurant. Alcohol served only to guests aged 21 and over. Please drink responsibly.</span>
+      <a href="credits.html">Photo credits</a>
     </div>
   </div>
 </footer>
 
-<nav class="actionbar" aria-label="Quick actions">
+<nav class="actionbar" aria-label="Quick action">
   <a class="btn btn--primary" href="https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9" target="_blank" rel="noopener">Get directions</a>
 </nav>
 
-<script type="module" src="assets/system.js"></script>
-<script type="module" src="assets/motion/motion.js"></script>
-<script type="module" src="assets/layout/layout.js"></script>
+<script>
+  // header turns solid after the hero starts to scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('is-solid', window.scrollY > 40);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  // phone menu
+  const toggle = nav.querySelector('.nav__toggle');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  nav.querySelectorAll('.nav__links a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
+  }));
+
+  // open now, in Hyderabad time (12:00 to 23:00 every day)
+  try {
+    const parts = Object.fromEntries(new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone: 'Asia/Kolkata' })
+      .formatToParts(new Date()).map(p => [p.type, p.value]));
+    const mins = +parts.hour * 60 + +parts.minute;
+    const open = mins >= 12 * 60 && mins < 23 * 60;
+    document.getElementById('status').classList.toggle('is-open', open);
+    document.getElementById('status-text').textContent = open ? 'Open now, until 23:00' : (mins < 12 * 60 ? 'Closed now, opens today at 12:00' : 'Closed now, opens tomorrow at 12:00');
+  } catch (e) {}
+</script>
 </body>
 </html>

@@ -5,12 +5,17 @@ Open `index.html` in a browser, or deploy the folder as-is to any static host (V
 
 ## What's on the page
 
-1. Hero: photo, "Restaurant and bar in Nacharam", Get directions
-2. Visit: address, hours (open/closed now is computed in IST), last order, private room
-3. Food: signature dishes by group (names only, no prices; the full menu stays offline)
-4. Bar: drinks by group, no prices
-5. Private room for parties
-6. Close and footer: Get directions, address, hours, credits
+Dark lounge design (plum-charcoal, cream, gold, magenta), one self-contained `index.html` (its own CSS, no kit files needed):
+
+1. Hero: full-screen photo of Ghungroo's own back bar, "Nacharam's bar & restaurant for 20 years", live open/closed status
+2. Our story: the two hosts, the story text, then the main hall, kitchen team and long table
+3. Food: signature dishes by group (no prices) beside four photos
+4. Bar: the bar with the Kingfisher fridge, Indian whisky, rum and beer brands
+5. Whisky list: every whisky served, plus a bottle collage
+6. Visit: the building at night, address, hours, Get directions
+7. Footer: logo, address, hours, 21+ line, credits
+
+There is no party room or private room; do not add one. The previous light design is kept in `.review/index-v1-light.html`.
 
 "Get directions" opens the Google Maps link https://maps.app.goo.gl/PfNpKAbqHh7Kubyq9
 
@@ -21,31 +26,32 @@ Open `index.html` in a browser, or deploy the folder as-is to any static host (V
 | Address | Narmada Arcade, above HDFC Bank, Snehapuri Colony, Nacharam | Cvent listing, matches the Maps pin |
 | Hours | Every day, 12:00 to 23:00 (24-hour, so the "Open now" line works) | Cvent listing |
 | Last order | 23:00 | Menu booklet ("Last Order 11-00 PM") |
-| Private room | Up to 40 guests | Cvent listing |
+| Years open | 20 years | Owner |
 | Phone, email, socials | Not shown | Not supplied |
 | Legal drinking age | 21 | Telangana rule |
 
-## Photographs to replace
+## Photographs
 
-All 10 photos are Unsplash stand-ins (all Indian: an Indian bar counter, Indian dishes and guests), not Ghungroo's own. Replace each file in `assets/img/` with a real
-photo of the same subject (same file name, WebP or JPG, landscape, window light, no flash):
+**Ghungroo's own** (from `~/Desktop/Claude/ghunghroo-photos`, graded by `.review/grade.py`: the "evening" look for the building, bar and halls, "gold" for the chef):
 
-| File | Where | Shoot |
+| File | Where | Source photo |
 |---|---|---|
-| hero-bar-room.webp | Hero (now 4 brand bottles side by side) | Ghungroo's own bar shelf with the brands you pour |
-| dining-room.webp | Visit | The dining room, set tables |
-| biryani.webp | Food strip | Keema biryani, top-down |
-| fish-curry.webp | Food strip | Chepala pulusu or a curry spread |
-| kebabs.webp | Food strip | Tandoori chicken or kalmi kebab |
-| curry-naan.webp | Food strip | A curry with roti or naan |
-| brand-*.webp | Bar (6 bottle tiles) | Your own bottles of each brand on the bar top |
-| guests.webp | Parties | The private room, set for a party (no people) |
-| thali.webp | Parties | A shared table spread |
+| real-visit-front-night.webp | Visit | #77, building front at night |
+| real-hero-bar.webp | Home page banner | #81, lit back bar, wide crop |
+| real-bar-side.webp | Bar section | #6, bar with the Kingfisher fridge |
+| real-story-team.webp | Story (gold look) | #54, kitchen team |
+| real-trio-hall.webp | Story trio | #16, main hall with round sofa |
+| real-trio-table.webp | Story trio | #85, long table, second hall |
+| real-trio-staff.webp | Story trio | #56, staff in the main hall |
+| real-kitchen-chef.webp | Food menu card (header) | #57, chef in the kitchen |
+
+**Still stand-ins:** the four food photos (biryani, curries, tandoori, palak) are Unsplash, because the shoot has no food. The whisky collage and Indian-whisky collage are built from Wikimedia Commons bottle photos (see credits.html).
+
+**Still to shoot:** 4 to 8 dishes (keema biryani, chepala pulusu, kalmi kebab, a curry with naan), top-down or 45°, daylight.
 
 ## Design system
 
-Built with the taste-skill kit (`assets/`): place layout, Source Serif 4 + Libre Franklin,
-magenta `#b8086a` from the menu booklet on warm off-white. Page CSS is in the `<style>` blocks in `index.html`.
+All styles are in the `<style>` block of `index.html`: colour tokens on `:root`, Source Serif 4 for headings and Libre Franklin for text. The logo on the dark header is `assets/logo/ghungroo-logo-cocktail-horizontal-on-dark.svg`.
 
 ## Logo
 
@@ -53,7 +59,7 @@ In `assets/logo/` (SVG is vector, use it for print and signboards; PNG for Whats
 
 | File | Use |
 |---|---|
-| ghungroo-logo-cocktail.svg / .png | Main logo: cocktail glass with a ghungroo-bell garnish, name, "Bar & Restaurant", "A legacy of 30 years" |
+| ghungroo-logo-cocktail.svg / .png | Main logo: cocktail glass with a ghungroo-bell garnish, name, "Bar & Restaurant", "A legacy of 20 years" |
 | ghungroo-logo-cocktail-dark.svg / .png | Same, on dark backgrounds |
 | ghungroo-logo-cocktail-magenta.svg / .png | Same, on brand magenta (signboard, social posts) |
 | ghungroo-logo-cocktail-horizontal.svg / .png | Wide version for the website header and letterheads |
