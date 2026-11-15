@@ -24,7 +24,7 @@ There is no party room or private room; do not add one. The previous light desig
 | Item | Value used | Source |
 |---|---|---|
 | Address | Narmada Arcade, above HDFC Bank, Snehapuri Colony, Nacharam | Cvent listing, matches the Maps pin |
-| Hours | Every day, 12 noon to 11 PM | Cvent listing |
+| Hours | Every day, 11 AM to 11 PM | Owner |
 | Last order | 11 PM | Menu booklet ("Last Order 11-00 PM") |
 | Years open | 20 years | Owner |
 | Takeaway phone | +91 93932 19992 (tap to call) | Owner |
